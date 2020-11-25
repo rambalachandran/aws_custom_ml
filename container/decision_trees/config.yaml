@@ -1,0 +1,30 @@
+# Config for AES sagemaker where the root is mapped to /opt/ml
+dir_root: /opt/ml
+input_dir_prefix: input/data
+train_channel_name: train
+config_dir_prefix: input/config
+default_hyperparam_file_name: hyperparameters_default.yaml
+hyperparam_file_name: hyperparameters.json
+model_dir_prefix: model
+model_name: 'decision-tree-model.pkl'
+output_dir_prefix: output
+project_name: scikitlearn_python
+
+img_ext: .png
+img_z0_ext: .png
+# input_channels: 3
+# input_z0_channels: 3
+# input_h: 96
+# input_w: 224
+latest_training_metadata:
+  input_channels: -1
+  input_h: -1
+  input_w: -1
+  input_z0_channels: -1
+  num_classes: -1
+mask_ext: .png
+
+num_classes: 1 # This must be in hyperparameter.json
+
+train_device: 'cuda'
+val_device: 'cuda'
